@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:food_recipe/model/SnackData.dart';
 import 'package:food_recipe/view/NavDrawer.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:food_recipe/view/detail.dart';
 
 class SnackPage extends StatefulWidget {
-  const SnackPage({ Key? key }) : super(key: key);
+  const SnackPage({Key? key}) : super(key: key);
 
   @override
   State<SnackPage> createState() => _SnackPageState();
@@ -19,8 +19,8 @@ class _SnackPageState extends State<SnackPage> {
         centerTitle: true,
         backgroundColor: Colors.amber,
       ),
-      drawer: NavDrawer(),
-       body: Padding(
+      drawer: const NavDrawer(),
+      body: Padding(
         padding: const EdgeInsets.all(10),
         child: GridView.count(
           crossAxisCount: 2,
@@ -42,14 +42,17 @@ class _SnackPageState extends State<SnackPage> {
 class Cards extends StatelessWidget {
   const Cards({Key? key, required this.snack}) : super(key: key);
 
-  final Snack snack;
+  final SnackData snack;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: () {
-      //   Navigator.push(context, MaterialPageRoute(builder: (context) =>));
-      // },
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => DetailSnackPage(snack: snack)));
+      },
       child: Card(
         elevation: 4.0,
         color: Colors.white,
@@ -59,7 +62,7 @@ class Cards extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               height: 140.0,
               width: 170.0,
               child: Image.network(

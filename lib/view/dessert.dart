@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_recipe/model/DessertData.dart';
 import 'package:food_recipe/view/NavDrawer.dart';
+import 'package:food_recipe/view/detail.dart';
 
 class DesPage extends StatefulWidget {
   const DesPage({Key? key}) : super(key: key);
@@ -41,14 +42,19 @@ class _DesPageState extends State<DesPage> {
 class Cards extends StatelessWidget {
   const Cards({Key? key, required this.dessert}) : super(key: key);
 
-  final Dessert dessert;
+  final DessertData dessert;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: () {
-      //   Navigator.push(context, MaterialPageRoute(builder: (context) => ));
-      // },
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => DetailDesPage(
+                      dessert: dessert,
+                    )));
+      },
       child: Card(
         elevation: 4.0,
         color: Colors.white,
@@ -58,12 +64,15 @@ class Cards extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              height: 140.0,
-              width: 170.0,
-              child: Image.network(
-                dessert.imgUrl,
-                fit: BoxFit.cover,
+            Hero(
+              tag: dessert.imgUrl,
+              child: SizedBox(
+                height: 140.0,
+                width: 170.0,
+                child: Image.network(
+                  dessert.imgUrl,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             const SizedBox(

@@ -21,7 +21,7 @@ class NavDrawer extends StatelessWidget {
   Widget buildHeader(BuildContext context) => Container(
         color: Colors.blue,
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
-        child: Image.asset("lib/image/thumb.png"),
+        child: Image.asset("lib/images/thumb.png"),
       );
 
   Widget buildMenu(BuildContext context) => Container(
@@ -30,39 +30,53 @@ class NavDrawer extends StatelessWidget {
           runSpacing: 16,
           children: [
             ListTile(
-                leading: const ImageIcon(AssetImage("lib/image/home.png")),
+                leading: const ImageIcon(AssetImage("lib/vector/home.png")),
                 title: const Text("Home"),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.pushReplacementNamed(context, "/");
                 }),
             ListTile(
-              leading: const ImageIcon(AssetImage("lib/image/beverage.png")),
-              title: const Text("Beverage"),
+              leading: const ImageIcon(AssetImage("lib/vector/beverage.png")),
+              title: const Text("Beverage",
+                  style: TextStyle(
+                      fontFamily: "OpenSans", fontWeight: FontWeight.bold)),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushReplacementNamed(context, "/beverages");
               },
             ),
             ListTile(
-              leading: const ImageIcon(AssetImage("lib/image/dessert.png")),
-              title: const Text("Dessert"),
+              leading: const ImageIcon(AssetImage("lib/vector/dessert.png")),
+              title: const Text(
+                "Dessert",
+                style: TextStyle(
+                    fontFamily: "OpenSans", fontWeight: FontWeight.bold),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushReplacementNamed(context, "/dessert");
               },
             ),
             ListTile(
-              leading: const ImageIcon(AssetImage("lib/image/lunch.png")),
-              title: const Text("Lunch"),
+              leading: const ImageIcon(AssetImage("lib/vector/lunch.png")),
+              title: const Text(
+                "Lunch",
+                style: TextStyle(
+                    fontFamily: "OpenSans", fontWeight: FontWeight.bold),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushReplacementNamed(context, "/lunch");
               },
             ),
             ListTile(
-              leading: const ImageIcon(AssetImage("lib/image/snack.png")),
-              title: const Text("Snack"),
+              leading: const ImageIcon(AssetImage("lib/vector/snack.png")),
+              title: const Text(
+                "Snack",
+                style: TextStyle(
+                    fontFamily: "OpenSans", fontWeight: FontWeight.bold),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushReplacementNamed(context, "/snack");
@@ -70,8 +84,12 @@ class NavDrawer extends StatelessWidget {
             ),
             const Divider(color: Colors.black54),
             ListTile(
-              leading: const ImageIcon(AssetImage("lib/image/setting.png")),
-              title: const Text("Setting"),
+              leading: const ImageIcon(AssetImage("lib/vector/setting.png")),
+              title: const Text(
+                "Setting",
+                style: TextStyle(
+                    fontFamily: "OpenSans", fontWeight: FontWeight.bold),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.pushReplacementNamed(context, "/setting");

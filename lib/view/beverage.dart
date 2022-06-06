@@ -41,7 +41,7 @@ class _BevPageState extends State<BevPage> {
 class Cards extends StatelessWidget {
   const Cards({Key? key, required this.beverages}) : super(key: key);
 
-  final Beverages beverages;
+  final BeveragesData beverages;
 
   @override
   Widget build(BuildContext context) {
@@ -63,12 +63,15 @@ class Cards extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              height: 140.0,
-              width: 170.0,
-              child: Image.network(
-                beverages.imgUrl,
-                fit: BoxFit.cover,
+            Hero(
+              tag: beverages.imgUrl,
+              child: SizedBox(
+                height: 140.0,
+                width: 170.0,
+                child: Image.network(
+                  beverages.imgUrl,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             const SizedBox(

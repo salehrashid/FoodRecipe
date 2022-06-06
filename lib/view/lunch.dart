@@ -42,14 +42,18 @@ class _LunchPageState extends State<LunchPage> {
 class Cards extends StatelessWidget {
   const Cards({Key? key, required this.lunch}) : super(key: key);
 
-  final Lunch lunch;
+  final LunchData lunch;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => DetailLunchPage(lunch: lunch,)));
+            context,
+            MaterialPageRoute(
+                builder: (context) => DetailLunchPage(
+                      lunch: lunch,
+                    )));
       },
       child: Card(
         elevation: 4.0,
