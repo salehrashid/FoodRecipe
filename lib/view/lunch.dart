@@ -19,7 +19,7 @@ class _LunchPageState extends State<LunchPage> {
         title: const Text("Lunch"),
         centerTitle: true,
       ),
-      drawer: NavDrawer(),
+      drawer: const NavDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: GridView.count(
@@ -64,7 +64,7 @@ class Cards extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               height: 140.0,
               width: 170.0,
               child: Image.network(

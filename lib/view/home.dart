@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_recipe/model/BeveragesData.dart';
 import 'package:food_recipe/view/NavDrawer.dart';
 import 'package:food_recipe/view/detail.dart';
+import 'package:food_recipe/helpers/constant.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -27,7 +28,7 @@ class _HomePageState extends State<HomePage> {
               "There is a lot\nof recipe",
               style: TextStyle(
                   fontSize: 30,
-                  fontFamily: "OpenSans",
+                  fontFamily: Constant.mainFont,
                   fontWeight: FontWeight.bold),
             ),
             const Padding(
@@ -35,7 +36,7 @@ class _HomePageState extends State<HomePage> {
               child: Text(
                 "Beverages",
                 style: TextStyle(
-                    fontFamily: "OpenSans",
+                    fontFamily: Constant.mainFont,
                     fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
