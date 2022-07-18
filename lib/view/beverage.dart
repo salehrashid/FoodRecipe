@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:food_recipe/model/BeveragesData.dart';
+import 'package:food_recipe/model/beverages_data.dart';
 import 'package:food_recipe/view/detail.dart';
-import 'package:food_recipe/view/NavDrawer.dart';
+import 'package:food_recipe/view/widget/nav_drawer.dart';
 
 class BevPage extends StatefulWidget {
+  static String routeName = "bevPage";
+  static Route<BevPage> route() {
+    return MaterialPageRoute<BevPage>(
+        settings: RouteSettings(name: routeName),
+        builder: (BuildContext context) => const BevPage());
+  }
+
   const BevPage({Key? key}) : super(key: key);
 
   @override
@@ -66,8 +73,8 @@ class Cards extends StatelessWidget {
             Hero(
               tag: beverages.imgUrl,
               child: SizedBox(
-                height: 140.0,
-                width: 170.0,
+                height: 130,
+                width: 170,
                 child: Image.network(
                   beverages.imgUrl,
                   fit: BoxFit.cover,

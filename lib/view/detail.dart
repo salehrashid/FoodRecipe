@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_recipe/model/BeveragesData.dart';
-import 'package:food_recipe/model/DessertData.dart';
-import 'package:food_recipe/model/LunchData.dart';
-import 'package:food_recipe/model/SnackData.dart';
+import 'package:food_recipe/model/beverages_data.dart';
+import 'package:food_recipe/model/dessert_data.dart';
+import 'package:food_recipe/model/lunch_data.dart';
+import 'package:food_recipe/model/snack_data.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:food_recipe/helpers/constant.dart';
 
@@ -53,7 +53,7 @@ class DetailBevPage extends StatelessWidget {
                     beverages.name,
                     style: const TextStyle(
                         fontSize: 25,
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontWeight: FontWeight.bold),
                   ),
 
@@ -65,7 +65,7 @@ class DetailBevPage extends StatelessWidget {
                       beverages.desc,
                       textAlign: TextAlign.justify,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),
@@ -78,7 +78,7 @@ class DetailBevPage extends StatelessWidget {
                     child: Text(
                       beverages.titleBahan1,
                       style: const TextStyle(
-                          fontFamily: Constant.mainFont,
+                          fontFamily: mainFont,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
@@ -91,7 +91,7 @@ class DetailBevPage extends StatelessWidget {
                     child: Text(
                       beverages.bahan1,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),
@@ -105,7 +105,7 @@ class DetailBevPage extends StatelessWidget {
                     child: Text(
                       beverages.titleBahan2,
                       style: const TextStyle(
-                          fontFamily: Constant.mainFont,
+                          fontFamily: mainFont,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
@@ -118,7 +118,7 @@ class DetailBevPage extends StatelessWidget {
                     child: Text(
                       beverages.bahan2,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),
@@ -132,7 +132,7 @@ class DetailBevPage extends StatelessWidget {
                     child: Text(
                       beverages.titleBahan3,
                       style: const TextStyle(
-                          fontFamily: Constant.mainFont,
+                          fontFamily: mainFont,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
@@ -145,7 +145,7 @@ class DetailBevPage extends StatelessWidget {
                     child: Text(
                       beverages.bahan3,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),
@@ -159,7 +159,7 @@ class DetailBevPage extends StatelessWidget {
                     child: Text(
                       beverages.titleCara,
                       style: const TextStyle(
-                          fontFamily: Constant.mainFont,
+                          fontFamily: mainFont,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
@@ -173,7 +173,7 @@ class DetailBevPage extends StatelessWidget {
                       beverages.cara,
                       textAlign: TextAlign.justify,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),
@@ -228,7 +228,7 @@ class DetailDesPage extends StatelessWidget {
                     dessert.name,
                     style: const TextStyle(
                         fontSize: 25,
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontWeight: FontWeight.bold),
                   ),
                   Padding(
@@ -238,7 +238,7 @@ class DetailDesPage extends StatelessWidget {
                       dessert.desc,
                       textAlign: TextAlign.justify,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),
@@ -249,7 +249,7 @@ class DetailDesPage extends StatelessWidget {
                     child: Text(
                       dessert.titleBahan1,
                       style: const TextStyle(
-                          fontFamily: Constant.mainFont,
+                          fontFamily: mainFont,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
@@ -260,7 +260,7 @@ class DetailDesPage extends StatelessWidget {
                     child: Text(
                       dessert.bahan1,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),
@@ -312,7 +312,7 @@ class DetailLunchPage extends StatelessWidget {
                     lunch.name,
                     style: const TextStyle(
                         fontSize: 25,
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontWeight: FontWeight.bold),
                   ),
                   Padding(
@@ -322,7 +322,7 @@ class DetailLunchPage extends StatelessWidget {
                       lunch.desc,
                       textAlign: TextAlign.justify,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),
@@ -333,7 +333,7 @@ class DetailLunchPage extends StatelessWidget {
                     child: Text(
                       lunch.titleBahan1,
                       style: const TextStyle(
-                          fontFamily: Constant.mainFont,
+                          fontFamily: mainFont,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
@@ -344,7 +344,7 @@ class DetailLunchPage extends StatelessWidget {
                     child: Text(
                       lunch.bahan1,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),
@@ -395,7 +395,7 @@ class DetailSnackPage extends StatelessWidget {
                     snack.name,
                     style: const TextStyle(
                         fontSize: 25,
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontWeight: FontWeight.bold),
                   ),
                   Padding(
@@ -405,7 +405,7 @@ class DetailSnackPage extends StatelessWidget {
                       snack.desc,
                       textAlign: TextAlign.justify,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),
@@ -416,7 +416,7 @@ class DetailSnackPage extends StatelessWidget {
                     child: Text(
                       snack.titleBahan1,
                       style: const TextStyle(
-                          fontFamily: Constant.mainFont,
+                          fontFamily: mainFont,
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
@@ -427,7 +427,7 @@ class DetailSnackPage extends StatelessWidget {
                     child: Text(
                       snack.bahan1,
                       style: const TextStyle(
-                        fontFamily: Constant.mainFont,
+                        fontFamily: mainFont,
                         fontSize: 14,
                       ),
                     ),

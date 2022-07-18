@@ -16,13 +16,12 @@ dependencies:
   google_fonts: 2.2.0
   carousel_slider: ^4.1.1
   sliding_up_panel: ^2.0.0+1
-  flutter_launcher_icons: ^0.9.3
-  rename: ^2.0.1
+  flutter_native_splash: ^2.1.6
+  day_night_switcher: ^0.2.0+1
 
-flutter_icons:
-  android: true
-  ios: true
-  image_path: "lib/assets/logo/logo.png"
+flutter_native_splash:
+  color: "#2698F3"
+  image: lib/assets/splash/splash.png
 
 dev_dependencies:
   flutter_test:
@@ -39,6 +38,7 @@ flutter:
     - lib/assets/vectors/home.png
     - lib/assets/vectors/setting.png
     - lib/assets/images/thumb.png
+    - lib/assets/images/me.png
   fonts:
     - family: OpenSans
       fonts:

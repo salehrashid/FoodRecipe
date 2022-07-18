@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:food_recipe/model/SnackData.dart';
-import 'package:food_recipe/view/NavDrawer.dart';
+import 'package:food_recipe/model/snack_data.dart';
+import 'package:food_recipe/view/widget/nav_drawer.dart';
 import 'package:food_recipe/view/detail.dart';
 
 class SnackPage extends StatefulWidget {
+  static String routeName = "snackPage";
+  static Route<SnackPage> route() {
+    return MaterialPageRoute<SnackPage>(
+        settings: RouteSettings(name: routeName),
+        builder: (BuildContext context) => const SnackPage());
+  }
+
   const SnackPage({Key? key}) : super(key: key);
 
   @override
@@ -63,7 +70,7 @@ class Cards extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: 140.0,
+              height: 130.0,
               width: 170.0,
               child: Image.network(
                 snack.imgUrl,

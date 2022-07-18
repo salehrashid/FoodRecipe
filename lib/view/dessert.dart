@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:food_recipe/model/DessertData.dart';
-import 'package:food_recipe/view/NavDrawer.dart';
+import 'package:food_recipe/model/dessert_data.dart';
+import 'package:food_recipe/view/widget/nav_drawer.dart';
 import 'package:food_recipe/view/detail.dart';
 
 class DesPage extends StatefulWidget {
+
+  static String routeName = "desPage";
+  static Route<DesPage> route() {
+    return MaterialPageRoute<DesPage>(
+        settings: RouteSettings(name: routeName),
+        builder: (BuildContext context) => const DesPage());
+  }
+
   const DesPage({Key? key}) : super(key: key);
 
   @override
@@ -19,7 +27,7 @@ class _DesPageState extends State<DesPage> {
         title: const Text("Dessert"),
         centerTitle: true,
       ),
-      drawer: NavDrawer(),
+      drawer: const NavDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: GridView.count(
@@ -67,7 +75,7 @@ class Cards extends StatelessWidget {
             Hero(
               tag: dessert.imgUrl,
               child: SizedBox(
-                height: 140.0,
+                height: 130.0,
                 width: 170.0,
                 child: Image.network(
                   dessert.imgUrl,

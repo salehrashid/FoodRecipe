@@ -1,9 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:food_recipe/helpers/constant.dart';
+import 'package:food_recipe/helpers/router.dart';
+import 'package:food_recipe/view/beverage.dart';
+import 'package:food_recipe/view/dessert.dart';
+import 'package:food_recipe/view/lunch.dart';
+import 'package:food_recipe/view/main/home.dart';
+import 'package:food_recipe/view/privacy_policy.dart';
+import 'package:food_recipe/view/snack.dart';
 
-class NavDrawer extends StatelessWidget {
+class NavDrawer extends StatefulWidget {
+  static String routeName = "navDrawer";
+  static Route<NavDrawer> route() {
+    return MaterialPageRoute<NavDrawer>(
+        settings: RouteSettings(name: routeName),
+        builder: (BuildContext context) => const NavDrawer());
+  }
+
   const NavDrawer({Key? key}) : super(key: key);
 
+  @override
+  State<NavDrawer> createState() => _NavDrawerState();
+}
+
+class _NavDrawerState extends State<NavDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -35,19 +54,16 @@ class NavDrawer extends StatelessWidget {
                     const ImageIcon(AssetImage("lib/assets/vectors/home.png")),
                 title: const Text("Home"),
                 onTap: () {
-                  Navigator.pop(context);
-                  Navigator.pushReplacementNamed(context, "/");
+                  NavRouter.instance.pushReplacement(HomePage.route());
                 }),
             ListTile(
               leading: const ImageIcon(
                   AssetImage("lib/assets/vectors/beverage.png")),
               title: const Text("Beverage",
                   style: TextStyle(
-                      fontFamily: Constant.mainFont,
-                      fontWeight: FontWeight.bold)),
+                      fontFamily: mainFont, fontWeight: FontWeight.bold)),
               onTap: () {
-                Navigator.pop(context);
-                Navigator.pushReplacementNamed(context, "/beverages");
+                NavRouter.instance.pushReplacement(BevPage.route());
               },
             ),
             ListTile(
@@ -56,11 +72,10 @@ class NavDrawer extends StatelessWidget {
               title: const Text(
                 "Dessert",
                 style: TextStyle(
-                    fontFamily: Constant.mainFont, fontWeight: FontWeight.bold),
+                    fontFamily: mainFont, fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                Navigator.pop(context);
-                Navigator.pushReplacementNamed(context, "/dessert");
+                NavRouter.instance.pushReplacement(DesPage.route());
               },
             ),
             ListTile(
@@ -69,11 +84,10 @@ class NavDrawer extends StatelessWidget {
               title: const Text(
                 "Lunch",
                 style: TextStyle(
-                    fontFamily: Constant.mainFont, fontWeight: FontWeight.bold),
+                    fontFamily: mainFont, fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                Navigator.pop(context);
-                Navigator.pushReplacementNamed(context, "/lunch");
+                NavRouter.instance.pushReplacement(LunchPage.route());
               },
             ),
             ListTile(
@@ -82,25 +96,22 @@ class NavDrawer extends StatelessWidget {
               title: const Text(
                 "Snack",
                 style: TextStyle(
-                    fontFamily: Constant.mainFont, fontWeight: FontWeight.bold),
+                    fontFamily: mainFont, fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                Navigator.pop(context);
-                Navigator.pushReplacementNamed(context, "/snack");
+                NavRouter.instance.pushReplacement(SnackPage.route());
               },
             ),
             const Divider(color: Colors.black54),
             ListTile(
-              leading:
-                  const ImageIcon(AssetImage("lib/assets/vectors/setting.png")),
+              leading: const Icon(Icons.privacy_tip_outlined),
               title: const Text(
-                "Setting",
+                "Privacy policy",
                 style: TextStyle(
-                    fontFamily: Constant.mainFont, fontWeight: FontWeight.bold),
+                    fontFamily: mainFont, fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                Navigator.pop(context);
-                Navigator.pushReplacementNamed(context, "/setting");
+                NavRouter.instance.pushReplacement(PrivacyPolicy.route());
               },
             )
           ],

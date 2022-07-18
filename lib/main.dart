@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:food_recipe/view/home.dart';
+import 'package:food_recipe/view/main/home.dart';
 import 'package:food_recipe/view/beverage.dart';
 import 'package:food_recipe/view/dessert.dart';
 import 'package:food_recipe/view/lunch.dart';
-import 'package:food_recipe/view/setting.dart';
+import 'package:food_recipe/view/privacy_policy.dart';
 import 'package:food_recipe/view/snack.dart';
+import 'package:food_recipe/helpers/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      navigatorKey: NavRouter.instance.navigatorKey,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -38,8 +40,8 @@ class MyApp extends StatelessWidget {
         "/snack": (BuildContext context) {
           return const SnackPage();
         },
-        "/setting": (BuildContext context) {
-          return const Setting();
+        "/privacyPolicy": (BuildContext context) {
+          return const PrivacyPolicy();
         },
       },
     );
