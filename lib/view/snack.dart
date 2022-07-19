@@ -3,8 +3,8 @@ import 'package:food_recipe/model/snack_data.dart';
 import 'package:food_recipe/view/widget/nav_drawer.dart';
 import 'package:food_recipe/view/detail.dart';
 
-class SnackPage extends StatefulWidget {
-  static String routeName = "snackPage";
+class SnackPage extends StatelessWidget {
+  static String routeName = "desPage";
   static Route<SnackPage> route() {
     return MaterialPageRoute<SnackPage>(
         settings: RouteSettings(name: routeName),
@@ -14,17 +14,12 @@ class SnackPage extends StatefulWidget {
   const SnackPage({Key? key}) : super(key: key);
 
   @override
-  State<SnackPage> createState() => _SnackPageState();
-}
-
-class _SnackPageState extends State<SnackPage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.amber,
         title: const Text("Snack"),
         centerTitle: true,
-        backgroundColor: Colors.amber,
       ),
       drawer: const NavDrawer(),
       body: Padding(

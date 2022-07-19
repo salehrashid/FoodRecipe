@@ -3,7 +3,7 @@ import 'package:food_recipe/model/beverages_data.dart';
 import 'package:food_recipe/view/detail.dart';
 import 'package:food_recipe/view/widget/nav_drawer.dart';
 
-class BevPage extends StatefulWidget {
+class BevPage extends StatelessWidget {
   static String routeName = "bevPage";
   static Route<BevPage> route() {
     return MaterialPageRoute<BevPage>(
@@ -14,17 +14,13 @@ class BevPage extends StatefulWidget {
   const BevPage({Key? key}) : super(key: key);
 
   @override
-  State<BevPage> createState() => _BevPageState();
-}
-
-class _BevPageState extends State<BevPage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text("Beverage"),
-          centerTitle: true,
-          backgroundColor: Colors.green),
+        backgroundColor: const Color.fromARGB(255, 26, 219, 0),
+        title: const Text("Beverage"),
+        centerTitle: true,
+      ),
       drawer: const NavDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(10),

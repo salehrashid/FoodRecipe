@@ -13,6 +13,6 @@ const List<ReviewData> reviews = <ReviewData>[
   ReviewData(id: 4, name: "Reina izumi", desc: '"Great!!"'),
   ReviewData(
       id: 5,
-      name: "Hayasaka",
+      name: "Hayasaka ai",
       desc: '"I will definitely recommend to my family"'),
 ];

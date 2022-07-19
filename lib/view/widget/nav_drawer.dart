@@ -8,7 +8,7 @@ import 'package:food_recipe/view/main/home.dart';
 import 'package:food_recipe/view/privacy_policy.dart';
 import 'package:food_recipe/view/snack.dart';
 
-class NavDrawer extends StatefulWidget {
+class NavDrawer extends StatelessWidget {
   static String routeName = "navDrawer";
   static Route<NavDrawer> route() {
     return MaterialPageRoute<NavDrawer>(
@@ -18,11 +18,6 @@ class NavDrawer extends StatefulWidget {
 
   const NavDrawer({Key? key}) : super(key: key);
 
-  @override
-  State<NavDrawer> createState() => _NavDrawerState();
-}
-
-class _NavDrawerState extends State<NavDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(

@@ -3,8 +3,7 @@ import 'package:food_recipe/model/dessert_data.dart';
 import 'package:food_recipe/view/widget/nav_drawer.dart';
 import 'package:food_recipe/view/detail.dart';
 
-class DesPage extends StatefulWidget {
-
+class DesPage extends StatelessWidget {
   static String routeName = "desPage";
   static Route<DesPage> route() {
     return MaterialPageRoute<DesPage>(
@@ -14,11 +13,6 @@ class DesPage extends StatefulWidget {
 
   const DesPage({Key? key}) : super(key: key);
 
-  @override
-  State<DesPage> createState() => _DesPageState();
-}
-
-class _DesPageState extends State<DesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

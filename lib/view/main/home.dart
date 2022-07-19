@@ -5,7 +5,8 @@ import 'package:food_recipe/view/widget/nav_drawer.dart';
 import 'package:food_recipe/view/detail.dart';
 import 'package:food_recipe/helpers/constant.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
   static String routeName = "homePage";
   static Route<HomePage> route() {
     return MaterialPageRoute<HomePage>(
@@ -13,13 +14,6 @@ class HomePage extends StatefulWidget {
         builder: (BuildContext context) => const HomePage());
   }
 
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(

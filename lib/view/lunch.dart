@@ -3,9 +3,8 @@ import 'package:food_recipe/model/lunch_data.dart';
 import 'package:food_recipe/view/detail.dart';
 import 'package:food_recipe/view/widget/nav_drawer.dart';
 
-class LunchPage extends StatefulWidget {
-
-  static String routeName = "lunchPage";
+class LunchPage extends StatelessWidget {
+  static String routeName = "desPage";
   static Route<LunchPage> route() {
     return MaterialPageRoute<LunchPage>(
         settings: RouteSettings(name: routeName),
@@ -14,11 +13,6 @@ class LunchPage extends StatefulWidget {
 
   const LunchPage({Key? key}) : super(key: key);
 
-  @override
-  State<LunchPage> createState() => _LunchPageState();
-}
-
-class _LunchPageState extends State<LunchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
