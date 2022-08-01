@@ -28,6 +28,7 @@ class LunchPage extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 2.0,
           mainAxisSpacing: 2.0,
+<<<<<<< HEAD
           children: List.generate(
             lunchData.length,
             (index) {
@@ -38,6 +39,15 @@ class LunchPage extends StatelessWidget {
               );
             },
           ),
+=======
+          children: List.generate(lunchData.length, (index) {
+            return Center(
+              child: Cards(
+                lunch: lunchData[index],
+              ),
+            );
+          }),
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
         ),
       ),
     );
@@ -54,6 +64,7 @@ class Cards extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
+<<<<<<< HEAD
           context,
           MaterialPageRoute(
             builder: (context) => DetailLunchPage(
@@ -61,6 +72,13 @@ class Cards extends StatelessWidget {
             ),
           ),
         );
+=======
+            context,
+            MaterialPageRoute(
+                builder: (context) => DetailLunchPage(
+                      lunch: lunch,
+                    )));
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
       },
       child: Card(
         elevation: 4.0,
@@ -85,7 +103,11 @@ class Cards extends StatelessWidget {
             Text(
               lunch.name,
               textAlign: TextAlign.center,
+<<<<<<< HEAD
             ),
+=======
+            )
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
           ],
         ),
       ),

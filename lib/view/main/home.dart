@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:food_recipe/helpers/router.dart';
 import 'package:food_recipe/model/beverages_data.dart';
 import 'package:food_recipe/model/review_data.dart';
 import 'package:food_recipe/view/user/user_profile.dart';
+=======
+import 'package:food_recipe/model/beverages_data.dart';
+import 'package:food_recipe/model/review_data.dart';
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
 import 'package:food_recipe/view/widget/nav_drawer.dart';
 import 'package:food_recipe/view/detail.dart';
 import 'package:food_recipe/helpers/constant.dart';
 
 class HomePage extends StatelessWidget {
+<<<<<<< HEAD
   static String routeName = "homePage";
   static Route<HomePage> route() {
     return MaterialPageRoute<HomePage>(
@@ -65,6 +71,58 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontFamily: mainFont, color: colorBlack),
                 ),
                 SizedBox(
+=======
+  const HomePage({Key? key}) : super(key: key);
+  static String routeName = "homePage";
+  static Route<HomePage> route() {
+    return MaterialPageRoute<HomePage>(
+        settings: RouteSettings(name: routeName),
+        builder: (BuildContext context) => const HomePage());
+  }
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+      appBar: AppBar(
+          centerTitle: true,
+          title: const Text("Food Recipe"),
+          backgroundColor: Colors.deepPurple),
+      drawer: const NavDrawer(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  const Text(
+                    "Hi Saleh",
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontFamily: mainFont,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Expanded(
+                      child: Align(
+                    alignment: Alignment.topRight,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Image.asset(
+                        "lib/assets/images/me.png",
+                        width: 40,
+                        height: 40,
+                      ),
+                    ),
+                  )),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text("Ready to cook for dinner?",
+                  style: TextStyle(fontFamily: mainFont, color: colorBlack)),
+              SizedBox(
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
                   height: 200,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
@@ -74,6 +132,7 @@ class HomePage extends StatelessWidget {
                         beverages: beveragesData[index],
                       );
                     },
+<<<<<<< HEAD
                   ),
                 ),
                 const SizedBox(
@@ -100,6 +159,32 @@ class HomePage extends StatelessWidget {
           ),
         ),
       );
+=======
+                  )),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                "Reviews",
+                style: TextStyle(
+                    fontFamily: mainFont,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25),
+              ),
+              const SizedBox(height: 20),
+              ListView.builder(
+                  itemCount: reviews.length,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, index) {
+                    return ReviwerList(
+                      reviewData: reviews[index],
+                    );
+                  }),
+            ],
+          ),
+        ),
+      ));
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
 }
 
 class BeveragesMainList extends StatelessWidget {
@@ -115,11 +200,17 @@ class BeveragesMainList extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.push(
+<<<<<<< HEAD
             context,
             MaterialPageRoute(
               builder: (context) => DetailBevPage(beverages: beverages),
             ),
           );
+=======
+              context,
+              MaterialPageRoute(
+                  builder: (context) => DetailBevPage(beverages: beverages)));
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
         },
         child: SizedBox(
           height: 200,
@@ -128,9 +219,14 @@ class BeveragesMainList extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Container(
               clipBehavior: Clip.antiAliasWithSaveLayer,
+<<<<<<< HEAD
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
               ),
+=======
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
               child: Hero(
                 tag: beverages.imgUrl,
                 child: Material(
@@ -163,9 +259,13 @@ class ReviwerList extends StatelessWidget {
       child: Card(
         elevation: 2,
         color: Colors.white,
+<<<<<<< HEAD
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
+=======
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
         child: Padding(
           padding: const EdgeInsets.only(top: 10, left: 10),
           child: Column(

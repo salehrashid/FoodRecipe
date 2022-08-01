@@ -43,6 +43,9 @@ flutter:
     - family: OpenSans
       fonts:
         - asset: lib/assets/font/open_sans.ttf
+<<<<<<< HEAD
     - family: SegoeUI
       fonts:
         - asset: lib/assets/font/segoe_ui.ttf
+=======
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818

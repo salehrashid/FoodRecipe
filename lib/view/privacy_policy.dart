@@ -53,7 +53,11 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
                   onChanged: (value) {
                     setState(() => isChecked = value!);
                   }),
+<<<<<<< HEAD
             ),
+=======
+            )
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
           ],
         ),
       ),

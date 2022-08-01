@@ -51,6 +51,7 @@ class Cards extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
+<<<<<<< HEAD
           context,
           MaterialPageRoute(
             builder: (context) => DetailDesPage(
@@ -58,6 +59,13 @@ class Cards extends StatelessWidget {
             ),
           ),
         );
+=======
+            context,
+            MaterialPageRoute(
+                builder: (context) => DetailDesPage(
+                      dessert: dessert,
+                    )));
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
       },
       child: Card(
         elevation: 4.0,
@@ -85,7 +93,11 @@ class Cards extends StatelessWidget {
             Text(
               dessert.name,
               textAlign: TextAlign.center,
+<<<<<<< HEAD
             ),
+=======
+            )
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
           ],
         ),
       ),

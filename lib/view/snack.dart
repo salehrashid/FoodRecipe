@@ -51,11 +51,17 @@ class Cards extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
+<<<<<<< HEAD
           context,
           MaterialPageRoute(
             builder: (context) => DetailSnackPage(snack: snack),
           ),
         );
+=======
+            context,
+            MaterialPageRoute(
+                builder: (context) => DetailSnackPage(snack: snack)));
+>>>>>>> 9945dadca8e5c8798e2e0db5c165d0c215ee3818
       },
       child: Card(
         elevation: 4.0,
