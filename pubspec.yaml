@@ -1,0 +1,48 @@
+name: food_recipe
+
+description: A new Flutter project.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  google_fonts: 2.2.0
+  carousel_slider: ^4.1.1
+  sliding_up_panel: ^2.0.0+1
+  flutter_native_splash: ^2.1.6
+  day_night_switcher: ^0.2.0+1
+
+flutter_native_splash:
+  color: "#2698F3"
+  image: lib/assets/splash/splash.png
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - lib/assets/vectors/lunch.png
+    - lib/assets/vectors/dessert.png
+    - lib/assets/vectors/snack.png
+    - lib/assets/vectors/beverage.png
+    - lib/assets/vectors/home.png
+    - lib/assets/vectors/setting.png
+    - lib/assets/images/thumb.png
+    - lib/assets/images/me.png
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: lib/assets/font/open_sans.ttf
+    - family: SegoeUI
+      fonts:
+        - asset: lib/assets/font/segoe_ui.ttf
